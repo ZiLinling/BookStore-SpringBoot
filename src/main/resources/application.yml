@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite::resource:db/bookstore.db
+#    url: jdbc:sqlite:src/main/resources/db/bookstore.db
+
+    #    url: jdbc:mysql://localhost:3306/bookstore?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: root
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+      poll-interval: 2s
+      quiet-period: 1s
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+
+server:
+  port: 8090
+  servlet:
+    context-path: /bookstore
+
+path:
+  forestage: D:/Project/vue/课设/forestage/public/resources/
+  backstage: D:/Project/vue/课设/backstage/public/resources/
+  #前端上传文件至后端后,下载至以上两个位置
